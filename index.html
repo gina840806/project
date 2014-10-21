@@ -1,1 +1,99 @@
-hi
+<!doctype html>
+<html>
+<head lang="zh-TW">
+  <meta charset="utf-8">
+  <title>音樂網</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#menu" ).menu();
+  });
+  </script>
+  <script>
+  $(function() {
+    $( "#dialog" ).dialog({
+	  width:1300,
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#phto" ).click(function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  });
+  </script>
+  
+  <script>
+  $(function() {
+    $( "#dialog" ).tabs();
+  });
+  </script>
+  
+  <script>
+    $(function(){
+     $("#gotop").click(function(){
+        jQuery("html,body").animate({
+            scrollTop:0
+        },1000);
+     });
+     $(window).scroll(function() {
+        if ( $(this).scrollTop() > 0){
+            $('#gotop').fadeIn("fast");
+        } else {
+            $('#gotop').stop().fadeOut("fast");
+        }
+    });
+   });
+  </script>
+</head>
+<body> 
+<header role="banner" class="terr-tw twhk">
+ <div class="row">
+  
+ </div>
+</header>
+<nav class="menu">
+  <ul id="menu">
+  <li class="active"><a href="#m1">最新發行</a></li>
+  <li><a href="#m2">熱門排行</a></li>
+  <li><a href="#m3">歌手查詢</a><ul>
+      <li><a href="#a1">男歌手</a></li>
+      <li><a href="#a2">女歌手</a></li>
+      <li><a href="#a3">團體</a></li>
+    </ul>
+  </li>
+  
+</ul>
+</nav>
+<div class="picture">
+ 
+</div>
+  <div class="container">
+    <section class="title">
+      
+    </section>
+    
+	
+  <footer>
+    <ul>
+      <li><a href="http://www.universalpictures.com/legal/index.html" target="_blank">使用條款</a></li>
+      <li><a href="http://www.nbcuni.com/privacy/" target="_blank">隱私權政策</a></li>
+      <li><a href="http://www.nbcuni.com/privacy/cookies/" target="_blank">COOKIE POLICY</a></li>
+    </ul>
+  </footer>
+  <div class="gotop" id="gotop">
+   <img src="photo.jpg" style="width: 50px; height: 50px;">
+  </div>
+</body>
+</html>
